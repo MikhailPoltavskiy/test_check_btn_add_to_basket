@@ -22,7 +22,7 @@ def browser(request):
         options = webdriver.ChromeOptions()
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-        service = Service(executable_path="C:/chromedriver/chromedriver.exe")
+        service = Service()
         browser = webdriver.Chrome(service=service, options=options)
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
